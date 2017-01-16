@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="de">
+<head>
+<title>Home - HTTPS-status Norge</title>
+<meta property="og:title" content="Home - HTTPS-status Norge" />
+
+<meta name="description" content="Hvor stor andel av domener eid av det offentlige i Norge bruker HTTPS?">
+<meta property="og:description" content="Hvor stor andel av domener eid av det offentlige i Norge bruker HTTPS?" />
+
+<!-- Basic Page Needs
+================================================== -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Mobile Specific Metas
+================================================== -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<meta name="root_url" content="/https-norge/">
+
+<!-- Favicons
+================================================== -->
+<!-- 128x128 -->
+<link rel="shortcut icon" type="image/ico" href="/https-norge/static/images/favicons/favicon.ico" />
+<link rel="icon" type="image/png" href="/https-norge/static/images/favicons/favicon.png" />
+
+<!-- 192x192, as recommended for Android
+https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
+-->
+<link rel="icon" type="image/png" sizes="192x192" href="/https-norge/static/images/favicons/pulse-192.png" />
+
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/https-norge/static/images/favicons/pulse-57.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/https-norge/static/images/favicons/pulse-72.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/https-norge/static/images/favicons/pulse-114.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/https-norge/static/images/favicons/pulse-144.png">
+
+<!-- CSS
+================================================== -->
+<link rel="stylesheet" href="/https-norge/static/css/normalize.min.css">
+<link rel="stylesheet" href="/https-norge/static/css/google-fonts.css">
+<link rel="stylesheet" href="/https-norge/static/js/vendor/DataTables-1.10.6/media/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="/https-norge/static/js/vendor/DataTables-1.10.6/media/css/dataTables.responsive.css">
+<link rel="stylesheet" href="/https-norge/static/css/main.css?201605128205421">
+
+<!-- Scripts
+================================================== -->
+<script src="/https-norge/static/js/vendor/modernizr-2.8.3.min.js"></script>
+<script src="/https-norge/static/js/vendor/jquery.min.js"></script>
+<script src="/https-norge/static/js/vendor/DataTables-1.10.6/media/js/jquery.dataTables.min.js"></script>
+<script src="/https-norge/static/js/vendor/DataTables-1.10.6/media/js/dataTables.responsive.js"></script>
+<script src="/https-norge/static/js/vendor/dataTables.lengthLinks.js"></script>
+<script src="/https-norge/static/js/dataTables.downloads.js"></script>
+<script src="/https-norge/static/js/vendor/d3.min.js"></script>
+<script src="/https-norge/static/js/vendor/querystring.js"></script>
+<script src="/https-norge/static/js/utils.js?201605128205421"></script>
+</head>
+
+<body id="home">
+<a id="skipnav" href="#content">Til innhold</a>
+<!--[if lte IE 9]>
+  <section>
+    <h2>Your browser is out of date.</h2>
+    <p style="color: #000;">
+      You are using an older version of Internet Explorer. For a better
+      experience, please update your browser to the latest version.
+    </p>
+    <p>
+      <a target="_blank"
+         href="http://browsehappy.com/">Learn how to update your browser.</a>
+    </p>
+  </section>
+<![endif]-->
+
+
+
+
+<section id="content">
+
+<div class="wrapper">
+  <div class="hero">
+
+    <h3>Hvor stor andel av domener eid av det offentlige i Norge bruker HTTPS?</h3>
+  </div>
+
+  <div id="results">
+    <div class="https">
+      <h4>Statlige</h4>
+      <div class="https_chart"
+        title="BRUKER HTTPS"
+        data-width="287"
+        data-report="/https-norge/data/reports/https-federal.json"
+        data-link_="/https-norge/https/federal/domains/"
+      ></div>
+      <a href="https/federal/domains/" class="button" target="_top">Vis resultater</a>
+    </div>
+
+    <div class="https">
+      <h4>Lokale og regionale</h4>
+      <div class="https_chart"
+        title="BRUKER HTTPS"
+        data-width="287"
+        data-report="/https-norge/data/reports/https-city.json"
+        data-link_="/https-norge/https/city/domains/"
+      ></div>
+      <a href="https/city/domains/" class="button" target="_top">Vis resultater</a>
+    </div>
+  </div>
+</div>
+
+<script src="/https-norge/static/js/https/donut.js?201605128205421"></script>
+
+</section>
+
+
+
+
+
+<script src="/https-norge/static/js/main.js"></script>
+
+</body>
+</html>
