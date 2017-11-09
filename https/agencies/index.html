@@ -1,11 +1,17 @@
 <!doctype html>
 <html lang="de">
 <head>
+<!-- Title and meta description
+================================================== -->
 <title>HTTPS på Statlige etaternettsteder - Alle Statlige etater - HTTPS-status Norge</title>
 <meta property="og:title" content="HTTPS på Statlige etaternettsteder - Alle Statlige etater - HTTPS-status Norge" />
+<meta name="twitter:title" content="HTTPS på Statlige etaternettsteder - Alle Statlige etater" />
 
 <meta name="description" content="Måler, hvor mange Statlige etaternettsteder som er tilgjengelige over HTTPS.">
 <meta property="og:description" content="Måler, hvor mange Statlige etaternettsteder som er tilgjengelige over HTTPS." />
+<meta name="twitter:description" content="Måler, hvor mange Statlige etaternettsteder som er tilgjengelige over HTTPS." />
+
+<link rel="canonical" href="https://nrkbeta.no/https-norge/https/agencies/" />
 
 <!-- Basic Page Needs
 ================================================== -->
@@ -19,6 +25,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
 <meta name="root_url" content="/https-norge/">
+
+<!-- Twitter Specific Metas
+================================================== -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@httpsjetzt" />
+<meta name="twitter:creator" content="@httpsjetzt" />
+<meta name="twitter:image" content="https://nrkbeta.no/https-norge/static/images/logo-httpsjetzt.png" />
+<meta name="twitter:image:alt" content="https.jetzt!" />
 
 <!-- Favicons
 ================================================== -->
@@ -44,25 +58,33 @@ https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chr
 ================================================== -->
 <link rel="stylesheet" href="/https-norge/static/css/normalize.min.css">
 <link rel="stylesheet" href="/https-norge/static/css/google-fonts.css">
-<link rel="stylesheet" href="/https-norge/static/js/vendor/DataTables-1.10.6/media/css/jquery.dataTables.min.css">
-<link rel="stylesheet" href="/https-norge/static/js/vendor/DataTables-1.10.6/media/css/dataTables.responsive.css">
-<link rel="stylesheet" href="/https-norge/static/css/main.css?201705127101049">
+
+<link rel="stylesheet" href="/https-norge/static/css/main.css?201711313174458">
 
 <!-- Scripts
 ================================================== -->
 <script src="/https-norge/static/js/vendor/modernizr-2.8.3.min.js"></script>
 <script src="/https-norge/static/js/vendor/jquery.min.js"></script>
-<script src="/https-norge/static/js/vendor/DataTables-1.10.6/media/js/jquery.dataTables.min.js"></script>
-<script src="/https-norge/static/js/vendor/DataTables-1.10.6/media/js/dataTables.responsive.js"></script>
-<script src="/https-norge/static/js/vendor/dataTables.lengthLinks.js"></script>
-<script src="/https-norge/static/js/dataTables.downloads.js"></script>
+
 <script src="/https-norge/static/js/vendor/d3.min.js"></script>
 <script src="/https-norge/static/js/vendor/querystring.js"></script>
-<script src="/https-norge/static/js/utils.js?201705127101049"></script>
+<script src="/https-norge/static/js/utils.js?201711313174458"></script>
+
+
+<!-- sigh, datatables -->
+
+<link rel="stylesheet" href="/https-norge/static/DataTables-1.10.12/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="/https-norge/static/Responsive-2.1.0/css/responsive.dataTables.min.css">
+
+<script src="/https-norge/static/DataTables-1.10.12/js/jquery.dataTables.min.js"></script>
+<script src="/https-norge/static/Responsive-2.1.0/js/dataTables.responsive.min.js"></script>
+
+<script src="/https-norge/static/js/dataTables.lengthLinks.js"></script>
+<script src="/https-norge/static/js/dataTables.downloads.js"></script>
 </head>
 
 <body id="https">
-<a id="skipnav" href="#content">Til innhold</a>
+<a id="skipnav" href="#skip-target" onclick="document.getElementById('skip-target').focus()">Til innhold</a>
 <!--[if lte IE 9]>
   <section>
     <h2>Your browser is out of date.</h2>
@@ -84,7 +106,7 @@ https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chr
 <path fill="white" d="M42.5.4h6.8l-5.2 8.2c-.1.2-.2.4-.2.6 0 .2.1.3.3.7l5.2 8.1h-6.8l-4.3-7.7c-.3-.3-.5-.7-.5-1.3 0-.4.1-.7.4-1.3L42.5.4zM6.4.4h4.3c1.6 0 2.7.8 3 2.6l3 15h-6.4L6.4.4zM0 .4h6.1V18H0zm17.2 0h6V18h-6zm13.7 0h6V18h-6zm-.4 3c0-2.3-1.7-3.4-3.4-3.4s-3.4 1-3.4 3.4 1.7 3.4 3.4 3.4 3.4-.8 3.4-3.4z"></path>
 </svg></a>
         </span>
-        <span class="stage">Eksperimentet er nå i <a href="https://nrkbeta.no/2016/05/11/https-status-i-norge-oversikten/">beta</a>.</span>
+        <span class="stage">Eksperimentet er beskrevet <a href="https://nrkbeta.no/2016/05/11/https-status-i-norge-oversikten/">her</a>.</span>
     </div>
     <nav>
         <div id="main-nav">
@@ -118,16 +140,15 @@ https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chr
         </li>
         <li>
             <a href="/https-norge/about/">Om denne oversikten</a>
-        </li>
+      </li>
     </ul>
-    </nav>
+  </nav>
 
-    <div class="overlay"></div>
-
+  <div class="overlay"></div>
 </header>
 
-
-<section id="content">
+<section id="content" role="main">
+  <a name="skip-target" id="skip-target" tabindex='-1' href='#' class="sr-only">Start of Main Content</a>
   
 
 <header class="chart">
@@ -137,17 +158,18 @@ https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chr
         title="BRUKER HTTPS"
         data-report="/https-norge/data/reports/https-federal.json"></div>
   </div>
-  <script src="/https-norge/static/js/https/donut.js?201705127101049"></script>
+  <script src="/https-norge/static/js/https/donut.js?201711313174458"></script>
 
   <div class="description">
     <h1>Sikker HTTP (HTTPS)</h1>
-    <h2>Siste oppdatering: <strong>06. mai 2017</strong></h2>
+    <h3>Siste oppdatering: <strong>05. november 2017</strong></h3>
     <p>
        Denne oversikten viser, om domener fra norske Statlige etater støtter HTTPS-protokollen (<code>https://</code>), og - hvis ja - hvor godt HTTPS er satt opp.
        <a href="https://no.wikipedia.org/wiki/HTTPS">HTTPS</a> gjør at kommunikasjonen mellom nettleseren i din datamaskin/mobile enhet og serveren som driver nettstedet skjer sikkert. Dette gjøres ved å sende informasjonen pakket inn i krypterte pakker.
        teknologien anbefalt av alle store aktører på nettet som Google og Facebook, og også offentlige organer som Det hvite hus har gått inn for å <a href="https://www.whitehouse.gov/blog/2015/06/08/https-everywhere-government" title="whitehouse.gov – HTTPS-Everywhere for Government">innføre HTTPS på alle statlige nettsteder i USA.</a><br/>
        I Norge er <a href="https://kvalitet.difi.no/artikkel/2015/11/32-tjenester-med-sensitiv-informasjon-er-kryptert" title="Difi – Tjenester med sensitiv informasjon er kryptert">anbefalingen fra Difi</a> enn så lenge at det skal være HTTPS på alle offentlige nettsteder som har innlogging eller behandler personopplysninger
     </p>
+
     <p>
       Bruk av HTTPS garanterer ikke mot at et nettsted kan bli hacket eller angrepet på andre måter. For mer informasjon om hva HTTPS gjør (og ikke gjør), besøk den engelske versjonen av <a href="https://https.cio.gov/faq/">Vanlige spørsmål</a>.
     </p>
@@ -156,15 +178,18 @@ https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chr
 </header>
 
 <section id="main-content" class="white-bkg">
-  <nav class="tab-menu">
-    <a href="/https-norge/https/federal/domains/" class="tab">Oversikt domener</a>
-    <span class="tab">Oversikt Statlig etat</span>
-    <a href="/https-norge/https/federal/info/" class="tab">Info</a>
+
+  <nav class="tab-menu" role="tablist">
+    <a href="/https-norge/https/federal/domains/" class="tab" role="tab" aria-controls="tab-panel" aria-selected="false">Oversikt domener</a>
+    <span class="tab" role="tab" aria-controls="tab-panel" aria-selected="true">Oversikt Statlig etat</span>
+    <a href="/https-norge/https/federal/info/" class="tab" role="tab" aria-controls="tab-panel" aria-selected="false">Info</a>
   </nav>
-  <div class="wrapper">
+
+  <div id="tab-panel" class="wrapper" role="tabpanel" aria-hidden="false">
     <table class="agency responsive https">
-        <thead>
-          <tr>
+      <caption>Secure HTTP(S) By Agency. Table is sortable via first row table headers. Each row contains an agency and related attributes.</caption>
+      <thead>
+        <tr>
             <th class="all" scope="col">Statlig etat</th>
             <th class="all" scope="col">Antall domener</th>
             <th class="min-tablet" scope="col">Bruker HTTPS</th>
@@ -175,14 +200,15 @@ https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chr
         </thead>
     </table>
   </div>
+
 </section>
 
-<script src="/https-norge/static/js/https/agencies.js?201705127101049"
+<script src="/https-norge/static/js/https/agencies.js?201711313174458"
         data-agency-report-url="/https-norge/data/agencies/https-federal.json"></script>
 
 </section>
 
-<footer>
+<footer role="contentinfo">
 	<div class="wrapper">
     Laget av <a href="https://nrkbeta.no/2016/05/11/https-status-i-norge-oversikten/">NRK</a>. Domenene som er sjekket finnes i datasettet <a href="https://github.com/byeskille/norway-gov-domains">norway-gov-domains</a>.
     <br/>
