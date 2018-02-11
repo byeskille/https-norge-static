@@ -68,16 +68,16 @@ https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chr
 <link rel="stylesheet" href="/https-norge/static/css/normalize.min.css">
 <link rel="stylesheet" href="/https-norge/static/css/google-fonts.css">
 
-<link rel="stylesheet" href="/https-norge/static/css/main.css?201711314201337">
+<link rel="stylesheet" href="/https-norge/static/css/main.css?201802042204041">
 
 <!-- Scripts
 ================================================== -->
 <script src="/https-norge/static/js/vendor/modernizr-2.8.3.min.js"></script>
-<script src="/https-norge/static/js/vendor/jquery.min.js"></script>
+<script src="/https-norge/static/js/vendor/jquery-3.2.1.min.js"></script>
 
 <script src="/https-norge/static/js/vendor/d3.min.js"></script>
 <script src="/https-norge/static/js/vendor/querystring.js"></script>
-<script src="/https-norge/static/js/utils.js?201711314201337"></script>
+<script src="/https-norge/static/js/utils.js?201802042204041"></script>
 
 
 <!-- sigh, datatables -->
@@ -88,7 +88,6 @@ https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chr
 <script src="/https-norge/static/DataTables-1.10.12/js/jquery.dataTables.min.js"></script>
 <script src="/https-norge/static/Responsive-2.1.0/js/dataTables.responsive.min.js"></script>
 
-<script src="/https-norge/static/js/dataTables.lengthLinks.js"></script>
 <script src="/https-norge/static/js/dataTables.downloads.js"></script>
 </head>
 
@@ -167,18 +166,17 @@ https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chr
         title="BRUKER HTTPS"
         data-report="/https-norge/data/reports/https-federal.json"></div>
   </div>
-  <script src="/https-norge/static/js/https/donut.js?201711314201337"></script>
+  <script src="/https-norge/static/js/https/donut.js?201802042204041"></script>
 
   <div class="description">
     <h1>Sikker HTTP (HTTPS)</h1>
-    <h3>Siste oppdatering: <strong>05. november 2017</strong></h3>
+    <h3>Siste oppdatering: <strong>11. februar 2018</strong></h3>
     <p>
        Denne oversikten viser, om domener fra norske Statlige etater støtter HTTPS-protokollen (<code>https://</code>), og - hvis ja - hvor godt HTTPS er satt opp.
        <a href="https://no.wikipedia.org/wiki/HTTPS">HTTPS</a> gjør at kommunikasjonen mellom nettleseren i din datamaskin/mobile enhet og serveren som driver nettstedet skjer sikkert. Dette gjøres ved å sende informasjonen pakket inn i krypterte pakker.
        teknologien anbefalt av alle store aktører på nettet som Google og Facebook, og også offentlige organer som Det hvite hus har gått inn for å <a href="https://www.whitehouse.gov/blog/2015/06/08/https-everywhere-government" title="whitehouse.gov – HTTPS-Everywhere for Government">innføre HTTPS på alle statlige nettsteder i USA.</a><br/>
        I Norge er <a href="https://kvalitet.difi.no/artikkel/2015/11/32-tjenester-med-sensitiv-informasjon-er-kryptert" title="Difi – Tjenester med sensitiv informasjon er kryptert">anbefalingen fra Difi</a> enn så lenge at det skal være HTTPS på alle offentlige nettsteder som har innlogging eller behandler personopplysninger
     </p>
-
     <p>
       Bruk av HTTPS garanterer ikke mot at et nettsted kan bli hacket eller angrepet på andre måter. For mer informasjon om hva HTTPS gjør (og ikke gjør), besøk den engelske versjonen av <a href="https://https.cio.gov/faq/">Vanlige spørsmål</a>.
     </p>
@@ -199,15 +197,14 @@ https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chr
       <caption>Secure HTTP(S) By Domain. Table is sortable via first row table headers. Each row contains a domain and related attributes.</caption>
       <thead>
           <tr>
-            <th class="all">Domene</th>
-            <th class="never">Canonical</th>
-            <th class="none">Statlig etat:</th>
-            <th class="min-tablet">Bruker HTTPS</th>
-            <th class="min-tablet">Alt på HTTPS</th>
-            <th class="min-tablet-l">Strict Transport Security (HSTS)</th>
-            <th class="min-tablet-l">Preloaded (anbefalt)</th>
-            <!--<th class="none">SSL Labs Grade</th>-->
-            <th class="none" scope="col"></th>
+          <th class="never"></th>
+          <th class="all">Domene</th>
+          <th class="never">Statlig etat:</th>
+          <th class="min-tablet">Bruker HTTPS</th>
+          <th class="min-tablet">Alt på HTTPS</th>
+          <th class="min-tablet-l">Strict Transport Security (HSTS)</th>
+          <th class="min-tablet-l">Skrudd av utdaterte/&#8203;usikre standarder</th>
+          <th class="min-tablet-l">Preloaded (anbefalt)</th>
             <th class="none" scope="col"></th>
           </tr>
         </thead>
@@ -216,7 +213,7 @@ https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chr
 
 </section>
 
-<script src="/https-norge/static/js/https/domains.js?201711314201337"
+<script src="/https-norge/static/js/https/domains.js?201802042204041"
         data-domain-report-url="/https-norge/data/domains/https-federal.json"
         data-domain-report-csv-url="/https-norge/data/domains/https-federal.csv"></script>
 
@@ -234,6 +231,7 @@ https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chr
 
 
 <script src="/https-norge/static/js/main.js"></script>
+<script src="/https-norge/static/js/tables.js"></script>
 
 </body>
 </html>
